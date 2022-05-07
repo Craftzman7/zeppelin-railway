@@ -23,21 +23,6 @@ index e7f8c0bc..b39a2560 100644
          "node-fetch": "^2.6.7",
          "parse-color": "^1.0.0",
          "passport": "^0.4.0",
-@@ -1085,14 +1085,6 @@
-         "node": ">=6.0.0"
-       }
-     },
--    "node_modules/bignumber.js": {
--      "version": "7.2.1",
--      "resolved": "https://registry.npmjs.org/bignumber.js/-/bignumber.js-7.2.1.tgz",
--      "integrity": "sha512-S4XzBk5sMB+Rcb/LNcpzXr57VRTxgAvaAEDAl1AwRx27j00hT84O6OkteE7u8UB3NuaaygCRrEpqox4uDOrbdQ==",
--      "engines": {
--        "node": "*"
--      }
--    },
-     "node_modules/binary-extensions": {
-       "version": "2.1.0",
-       "resolved": "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.1.0.tgz",
 @@ -2121,6 +2113,14 @@
          "node": ">=0.4.0"
        }
