@@ -1,0 +1,80 @@
+From 5760a66b7976439a1845f2596b592989c660c22e Mon Sep 17 00:00:00 2001
+From: Craftzman7 <zezetta@icloud.com>
+Date: Sat, 7 May 2022 15:01:28 -0700
+Subject: [PATCH 2/2] Run on railway
+
+---
+ backend/src/plugins/Automod/actions/startThread.ts          | 2 +-
+ backend/src/plugins/Automod/triggers/threadArchive.ts       | 2 +-
+ backend/src/plugins/Automod/triggers/threadCreate.ts        | 2 +-
+ backend/src/plugins/Automod/triggers/threadDelete.ts        | 2 +-
+ backend/src/plugins/Automod/triggers/threadUnarchive.ts     | 2 +-
+ backend/src/plugins/InternalPoster/functions/sendMessage.ts | 2 +-
+ 6 files changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/backend/src/plugins/Automod/actions/startThread.ts b/backend/src/plugins/Automod/actions/startThread.ts
+index 0fead10b..3a419ead 100644
+--- a/backend/src/plugins/Automod/actions/startThread.ts
++++ b/backend/src/plugins/Automod/actions/startThread.ts
+@@ -1,4 +1,4 @@
+-import { GuildFeature, ThreadAutoArchiveDuration } from "discord-api-types";
++import { GuildFeature, ThreadAutoArchiveDuration } from "discord-api-types/v9";
+ import { TextChannel } from "discord.js";
+ import * as t from "io-ts";
+ import { renderTemplate, TemplateSafeValueContainer } from "../../../templateFormatter";
+diff --git a/backend/src/plugins/Automod/triggers/threadArchive.ts b/backend/src/plugins/Automod/triggers/threadArchive.ts
+index 40cd43df..d4ed631b 100644
+--- a/backend/src/plugins/Automod/triggers/threadArchive.ts
++++ b/backend/src/plugins/Automod/triggers/threadArchive.ts
+@@ -1,4 +1,4 @@
+-import { Snowflake } from "discord-api-types";
++import { Snowflake } from "discord-api-types/v9";
+ import { User, Util } from "discord.js";
+ import * as t from "io-ts";
+ import { tNullable } from "../../../utils";
+diff --git a/backend/src/plugins/Automod/triggers/threadCreate.ts b/backend/src/plugins/Automod/triggers/threadCreate.ts
+index f4bc7e7a..c0ae6ad3 100644
+--- a/backend/src/plugins/Automod/triggers/threadCreate.ts
++++ b/backend/src/plugins/Automod/triggers/threadCreate.ts
+@@ -1,4 +1,4 @@
+-import { Snowflake } from "discord-api-types";
++import { Snowflake } from "discord-api-types/v9";
+ import { User, Util } from "discord.js";
+ import * as t from "io-ts";
+ import { automodTrigger } from "../helpers";
+diff --git a/backend/src/plugins/Automod/triggers/threadDelete.ts b/backend/src/plugins/Automod/triggers/threadDelete.ts
+index 988ee752..cecb5862 100644
+--- a/backend/src/plugins/Automod/triggers/threadDelete.ts
++++ b/backend/src/plugins/Automod/triggers/threadDelete.ts
+@@ -1,4 +1,4 @@
+-import { Snowflake } from "discord-api-types";
++import { Snowflake } from "discord-api-types/v9";
+ import { User, Util } from "discord.js";
+ import * as t from "io-ts";
+ import { automodTrigger } from "../helpers";
+diff --git a/backend/src/plugins/Automod/triggers/threadUnarchive.ts b/backend/src/plugins/Automod/triggers/threadUnarchive.ts
+index 05e729f1..ce3adf81 100644
+--- a/backend/src/plugins/Automod/triggers/threadUnarchive.ts
++++ b/backend/src/plugins/Automod/triggers/threadUnarchive.ts
+@@ -1,4 +1,4 @@
+-import { Snowflake } from "discord-api-types";
++import { Snowflake } from "discord-api-types/v9";
+ import { User, Util } from "discord.js";
+ import * as t from "io-ts";
+ import { tNullable } from "../../../utils";
+diff --git a/backend/src/plugins/InternalPoster/functions/sendMessage.ts b/backend/src/plugins/InternalPoster/functions/sendMessage.ts
+index bc52ac05..8628d5fc 100644
+--- a/backend/src/plugins/InternalPoster/functions/sendMessage.ts
++++ b/backend/src/plugins/InternalPoster/functions/sendMessage.ts
+@@ -2,7 +2,7 @@ import { Message, MessageOptions, NewsChannel, TextChannel, WebhookClient } from
+ import { GuildPluginData } from "knub";
+ import { InternalPosterPluginType } from "../types";
+ import { getOrCreateWebhookForChannel } from "./getOrCreateWebhookForChannel";
+-import { APIMessage } from "discord-api-types";
++import { APIMessage } from "discord-api-types/v9";
+ import { isDiscordAPIError } from "../../../utils";
+ import { getOrCreateWebhookClientForChannel } from "./getOrCreateWebhookClientForChannel";
+ 
+-- 
+2.33.1.windows.1
+
