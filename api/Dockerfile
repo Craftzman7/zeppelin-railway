@@ -11,7 +11,7 @@ WORKDIR /app/ZeppelinBot
 ARG GIT_REPO=https://github.com/Ibotmealot/ZeppelinBot.git
 RUN git clone $GIT_REPO .
 
-RUN nvm install
+RUN nvm install 16.6.1
 RUN touch .env
 COPY dependencies.patch .
 COPY discord-types.patch .
