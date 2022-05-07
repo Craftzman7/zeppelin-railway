@@ -13,8 +13,10 @@ RUN git clone $GIT_REPO .
 
 RUN nvm install
 RUN touch .env
-COPY railway.patch .
-RUN git apply railway.patch
+COPY dependencies.patch .
+COPY discord-types.patch .
+RUN git apply dependencies.patch
+RUN git apply discord-types.patch
 
 WORKDIR /app/ZeppelinBot/backend
 RUN npm ci
